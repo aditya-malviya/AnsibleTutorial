@@ -1,0 +1,11 @@
+--- # my loops
+ hosts: all
+ become: yes
+ connection: ssh
+ tasks:
+        - name: add users
+          user: name='{{item}}' state=present
+          with_items:
+                  - adityamalviya
+                  - pranaytest
+                  - manojtest 
